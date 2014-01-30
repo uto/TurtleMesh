@@ -38,6 +38,13 @@ namespace Turtle
         {
             _faces.Add(face);
         }
+        /// <summary>
+ 
+        /// Appends a list of faces to the end of the mesh face list.
+ 
+        /// </summary>
+ 
+        /// <param name="faces">Faces to add.</param>
 
         public void AddFaces(IEnumerable<TurtleFace> faces)
         {
@@ -58,6 +65,14 @@ namespace Turtle
         {
             _vertices.Add(vertex);
         }
+        
+        /// <summary>
+ 
+        /// Appends a list of vertices to the end of the mesh vertices list.
+ 
+        /// </summary>
+ 
+        /// <param name="vertices">Vertices to add.</param>
         
         public void AddVertices(IEnumerable<TurtleVertex> vertices)
         {
