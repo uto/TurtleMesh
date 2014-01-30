@@ -24,6 +24,12 @@ namespace Turtle
                 AddFace(new TurtleFace(other.FaceAt(i)));
             }
         }
+        
+         public TurtleMesh(IEnumerable<TurtleVertex> vertices, IEnumerable<TurtleFace> faces)
+        {
+            AddVertices(vertices);
+            AddFaces(faces);
+        }
 
         List<TurtleFace> _faces = new List<TurtleFace>();
         List<TurtleVertex> _vertices = new List<TurtleVertex>();
@@ -33,6 +39,11 @@ namespace Turtle
             _faces.Add(face);
         }
 
+        public void AddFaces(IEnumerable<TurtleFace> faces)
+        {
+            _faces.AddRange(faces);
+        }
+        
         public TurtleFace FaceAt(int index)
         {
             return _faces[index];
@@ -46,6 +57,11 @@ namespace Turtle
         public void AddVertex(TurtleVertex vertex)
         {
             _vertices.Add(vertex);
+        }
+        
+        public void AddVertices(IEnumerable<TurtleVertex> vertices)
+        {
+            _vertices.AddRange(vertices);
         }
 
         public void AppendOther(ITurtleMesh other)
